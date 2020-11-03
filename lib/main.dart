@@ -95,12 +95,15 @@ class _MyHomePageState extends State<MyHomePage> {
               'Please select the folder or file you want to analyze:',
             ),
             SizedBox(height: 10),
-            TextField(
+            new Container(
+              margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child:             TextField(
               obscureText: false,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Folder or file',
               ),
+            ),
             ),
           ],
         ),
