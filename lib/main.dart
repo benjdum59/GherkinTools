@@ -46,7 +46,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -55,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
     });
   }
 
@@ -96,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Please select the folder or file you want to analyze:',
             ),
+            SizedBox(height: 10),
             TextField(
               obscureText: false,
               decoration: InputDecoration(
@@ -111,6 +110,25 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Route"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: Text('Go back!'),
+        ),
+      ),
     );
   }
 }
